@@ -1,0 +1,407 @@
+/* --- Global Resets & Variables --- */
+:root {
+    --neon-green: #00ff87;
+    --lime-green: #9acd32;
+    --light-green: #88e26a;
+    --purple-dark: #2c0d63;
+    --purple-light: #6a6ae2;
+    --gradient-aura: linear-gradient(270deg, #ff0080, #7928ca, #2afadf, #00ff87);
+    --glass-bg: rgba(15, 15, 15, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #050505;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* --- Animated Aura Glow Background --- */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--gradient-aura);
+    background-size: 400% 400%;
+    animation: auraGlow 15s ease infinite;
+    opacity: 0.15;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+@keyframes auraGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Glassmorphism Base --- */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* --- Header --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary { background: #333; color: white; }
+.btn-primary:hover { background: var(--neon-green); color: black; }
+.btn-secondary { background: var(--light-green); color: black; }
+.btn-secondary:hover { background: white; }
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.text-purple { color: #b7a4ff; }
+.text-neon { color: var(--neon-green); }
+
+/* --- Grid Layouts for Sections --- */
+.dual-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* --- Section 1 Typography & Styling --- */
+.badge {
+    display: inline-block;
+    background: black;
+    color: var(--neon-green);
+    padding: 5px 15px;
+    border: 1px solid var(--neon-green);
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+.service-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.service-list li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: black;
+    background: var(--neon-green);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-top: 15px;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--neon-green);
+    transform: translateY(-3px);
+    text-shadow: 0 0 15px var(--neon-green);
+}
+
+.gallery-link a i {
+    color: white;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+.gallery-link a i:hover { color: var(--neon-green); }
+
+/* --- Section 2: Contact & Form --- */
+.contact-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.title-accent {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--purple-light);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    border-left: 2px solid var(--neon-green);
+}
+
+.info-block h3 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.info-block p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #aaa;
+}
+
+.form-title {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--lime-green);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Grid */
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.full-width { grid-column: 1 / -1; }
+
+.input-group-custom label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+.required { color: #ff4d4d; }
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select,
+.form-control {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(0, 255, 135, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.split-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.phone-input {
+    display: flex;
+}
+.phone-input select {
+    width: 80px;
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    background: rgba(255,255,255,0.1);
+}
+.phone-input input {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Checkboxes */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #aaa;
+    cursor: pointer;
+}
+.checkbox-container input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--neon-green);
+}
+
+.other-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.other-input input[type="text"] { flex: 1; }
+
+/* Submit Button */
+.btn-submit {
+    background: var(--light-green);
+    color: black;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: var(--neon-green);
+    box-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
+}
+
+/* --- Dropdown Specifics (For your JS) --- */
+.dropdown-wrapper { position: relative; display: flex; }
+.dropdown-wrapper .btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0 15px;
+    cursor: pointer;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 10;
+    margin-top: 5px;
+}
+.dropdown-menu.show { display: block; }
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.dropdown-item:hover {
+    background: var(--neon-green);
+    color: black;
+}
+
+/* --- Responsive Design --- */
+@media screen and (max-width: 998px) {
+    .dual-col {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-block {
+        border-left: none;
+        border-bottom: 1px solid var(--glass-border);
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+    .v-line { display: none; }
+}
+
+@media screen and (max-width: 500px) {
+    .split-inputs {
+        grid-template-columns: 1fr;
+    }
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+    .other-input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .other-input input[type="text"] { width: 100%; }
+}
