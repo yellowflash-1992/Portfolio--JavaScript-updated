@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Index / Welcome Page Styles
+   ========================================================================== */
+
+/* Staggered transition animation delays for list items */
+.sci li:nth-child(1),
+.sci-item-1 {
+  --i: 1;
+}
+
+.sci li:nth-child(2),
+.sci-item-2 {
+  --i: 2;
+}
+
+.sci li:nth-child(3),
+.sci-item-3 {
+  --i: 3;
+}
+
+.sci li:nth-child(4),
+.sci-item-4 {
+  --i: 4;
+}
+
+/* Specific link margins and alignments */
+.sci .resume-link {
+  margin-left: 15%;
+}
+
+.sci .portfolio-link {
+  margin-right: 17px;
+}
+
+.sci {
+  margin-right: 10px;
+}

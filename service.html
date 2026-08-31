@@ -1,167 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services | Portfolio</title>
-    <link rel="stylesheet" href="CSS/service.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/service.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <!-- Navigation / Header -->
     <header class="glass-panel top-nav">
-        <div class="nav-buttons">
-            <a class="btn-primary" href="index.html">Welcome Page</a>
-            <a class="btn-secondary" href="portfolio.html">Portfolio</a>
-        </div>
-        <h1 class="page-title">
-            <span class="text-purple">Welcome to</span> 
-            <span class="text-neon">Service Page</span>
-        </h1>
+      <div class="nav-buttons">
+        <a class="btn-primary" href="index.html">Welcome Page</a>
+        <a class="btn-secondary" href="portfolio.html">Portfolio</a>
+      </div>
+      <h1 class="page-title">
+        <span class="text-purple">Welcome to</span>
+        <span class="text-neon">Service Page</span>
+      </h1>
     </header>
 
     <main class="container">
-        <!-- Section 1: Aim & Services -->
-        <section class="glass-panel dual-col">
-            <div class="col-left">
-                <div class="badge">Our Aim</div>
-                <h3>We Focus on your story</h3>
-                <p class="lead-text">
-                    We focus on clean code and efficient design, ensuring seamless interactions that align with user expectations and business objectives.
-                </p>
-                <div class="gallery-link">
-                    <p><b>TO VIEW/VISIT OUR WORK GALLERY:</b></p>
-                    <p>Click here: <a href="#"><i class="fa-brands fa-github"></i></a></p>
+      <!-- Section 1: Aim & Services -->
+      <section class="glass-panel dual-col">
+        <div class="col-left">
+          <div class="badge">Our Aim</div>
+          <h3>We Focus on your story</h3>
+          <p class="lead-text">
+            We focus on clean code and efficient design, ensuring seamless
+            interactions that align with user expectations and business
+            objectives.
+          </p>
+          <div class="gallery-link">
+            <p><b>TO VIEW/VISIT OUR WORK GALLERY:</b></p>
+            <p>
+              Click here:
+              <a href="https://github.com/yellowflash-1992"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-right">
+          <div class="badge">Our Services</div>
+          <ul class="service-list">
+            <li>Website Design</li>
+            <li>Graphic Design</li>
+            <li>Video Editing</li>
+            <li>Digital Marketing</li>
+            <li>and more...</li>
+          </ul>
+
+          <div class="social-wrapper">
+            <h3>Socials:</h3>
+            <ul class="socials">
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Contact & Form -->
+      <section class="glass-panel dual-col contact-section">
+        <div class="col-left contact-info">
+          <h2 class="title-accent">Contact Us</h2>
+          <div class="info-block">
+            <h3>Address:</h3>
+            <p>
+              Times Square, Unguwan Gimbia<br />Sabon Tasha<br />Sabo signboard,
+              Kaduna State
+            </p>
+          </div>
+          <div class="info-block">
+            <h3>Reach out at:</h3>
+            <p>Email: yellowflash@yahoo.com<br />Phone: +234 91 623 84050</p>
+          </div>
+        </div>
+
+        <div class="col-right form-wrapper">
+          <h2 class="form-title">REQUEST FORM</h2>
+          <form action="" method="post" class="request-form">
+            <div class="form-grid">
+              <div class="input-group-custom">
+                <label>Name <span class="required">*</span></label>
+                <div class="split-inputs">
+                  <input type="text" name="fname" placeholder="First Name" />
+                  <input type="text" name="lname" placeholder="Last Name" />
                 </div>
-            </div>
-            
-            <div class="col-right">
-                <div class="badge">Our Services</div>
-                <ul class="service-list">
-                    <li>Website Design</li>
-                    <li>Graphic Design</li>
-                    <li>Video Editing</li>
-                    <li>Digital Marketing</li>
-                    <li>and more...</li>
-                </ul>
-                
-                <div class="social-wrapper">
-                    <h3>Socials:</h3>
-                    <ul class="socials">
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    </ul>
+              </div>
+
+              <div class="input-group-custom">
+                <label>Email <span class="required">*</span></label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="example@mail.com"
+                />
+              </div>
+
+              <div class="input-group-custom">
+                <label>Phone <span class="required">*</span></label>
+                <div class="phone-input">
+                  <select name="country_code">
+                    <option value="USA">USA</option>
+                    <option value="NGA">NGA</option>
+                    <option value="UK">UK</option>
+                  </select>
+                  <input type="tel" placeholder="(555) 000-0000" />
                 </div>
-            </div>
-        </section>
+              </div>
 
-        <!-- Section 2: Contact & Form -->
-        <section class="glass-panel dual-col contact-section">
-            <div class="col-left contact-info">
-                <h2 class="title-accent">Contact Us</h2>
-                <div class="info-block">
-                    <h3>Address:</h3>
-                    <p>Times Square, Unguwan Gimbia<br>Sabon Tasha<br>Sabo signboard, Kaduna State</p>
+              <div class="input-group-custom full-width">
+                <label>Company <span class="required">*</span></label>
+                <input type="text" name="company" placeholder="Company Name" />
+              </div>
+
+              <!-- Dropdowns leveraging your JS -->
+              <div class="input-group-custom">
+                <label>Type of Business <span class="required">*</span></label>
+                <div class="input-group dropdown-wrapper">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Please select"
+                    readonly
+                  />
+                  <button class="btn dropdown-toggle" type="button">
+                    <span class="fa-solid fa-caret-down"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Big</a></li>
+                    <li><a class="dropdown-item" href="#">Medium</a></li>
+                    <li><a class="dropdown-item" href="#">Small</a></li>
+                  </ul>
                 </div>
-                <div class="info-block">
-                    <h3>Reach out at:</h3>
-                    <p>Email: yellowflash@yahoo.com<br>Phone: +234 91 623 84050</p>
+              </div>
+
+              <div class="input-group-custom">
+                <label>Type of Website <span class="required">*</span></label>
+                <div class="input-group dropdown-wrapper">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Please select"
+                    readonly
+                  />
+                  <button class="btn dropdown-toggle" type="button">
+                    <span class="fa-solid fa-caret-down"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">E-commerce</a></li>
+                    <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                    <li><a class="dropdown-item" href="#">Corporate</a></li>
+                  </ul>
                 </div>
+              </div>
             </div>
 
-            <div class="col-right form-wrapper">
-                <h2 class="form-title">REQUEST FORM</h2>
-                <form action="" method="post" class="request-form">
-                    
-                    <div class="form-grid">
-                        <div class="input-group-custom">
-                            <label>Name <span class="required">*</span></label>
-                            <div class="split-inputs">
-                                <input type="text" name="fname" placeholder="First Name">
-                                <input type="text" name="lname" placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <div class="input-group-custom">
-                            <label>Email <span class="required">*</span></label>
-                            <input type="email" name="email" placeholder="example@mail.com">
-                        </div>
-
-                        <div class="input-group-custom">
-                            <label>Phone <span class="required">*</span></label>
-                            <div class="phone-input">
-                                <select name="country_code">
-                                    <option value="USA">USA</option>
-                                    <option value="NGA">NGA</option>
-                                    <option value="UK">UK</option>
-                                </select>
-                                <input type="tel" placeholder="(555) 000-0000">
-                            </div>
-                        </div>
-
-                        <div class="input-group-custom full-width">
-                            <label>Company <span class="required">*</span></label>
-                            <input type="text" name="company" placeholder="Company Name">
-                        </div>
-
-                        <!-- Dropdowns leveraging your JS -->
-                        <div class="input-group-custom">
-                            <label>Type of Business <span class="required">*</span></label>
-                            <div class="input-group dropdown-wrapper">
-                                <input type="text" class="form-control" placeholder="Please select" readonly />
-                                <button class="btn dropdown-toggle" type="button">
-                                    <span class="fa-solid fa-caret-down"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Big</a></li>
-                                    <li><a class="dropdown-item" href="#">Medium</a></li>
-                                    <li><a class="dropdown-item" href="#">Small</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="input-group-custom">
-                            <label>Type of Website <span class="required">*</span></label>
-                            <div class="input-group dropdown-wrapper">
-                                <input type="text" class="form-control" placeholder="Please select" readonly />
-                                <button class="btn dropdown-toggle" type="button">
-                                    <span class="fa-solid fa-caret-down"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">E-commerce</a></li>
-                                    <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                                    <li><a class="dropdown-item" href="#">Corporate</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="additional-services full-width">
-                        <label class="section-label">Additional Services</label>
-                        <div class="checkbox-grid">
-                            <label class="checkbox-container"><input type="checkbox"> Landing Page</label>
-                            <label class="checkbox-container"><input type="checkbox"> Ad Management</label>
-                            <label class="checkbox-container"><input type="checkbox"> SEO</label>
-                            <label class="checkbox-container"><input type="checkbox"> Video</label>
-                        </div>
-                        <div class="other-input">
-                            <label class="checkbox-container"><input type="checkbox"> Other:</label>
-                            <input type="text" placeholder="Specify...">
-                        </div>
-                    </div>
-
-                    <div class="input-group-custom full-width">
-                        <label>Comment:</label>
-                        <textarea rows="4" placeholder="How can we help you?"></textarea>
-                    </div>
-
-                    <button class="btn-submit" type="submit">Submit Request</button>
-                </form>
+            <div class="additional-services full-width">
+              <label class="section-label">Additional Services</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-container"
+                  ><input type="checkbox" /> Landing Page</label
+                >
+                <label class="checkbox-container"
+                  ><input type="checkbox" /> Ad Management</label
+                >
+                <label class="checkbox-container"
+                  ><input type="checkbox" /> SEO</label
+                >
+                <label class="checkbox-container"
+                  ><input type="checkbox" /> Video</label
+                >
+              </div>
+              <div class="other-input">
+                <label class="checkbox-container"
+                  ><input type="checkbox" /> Other:</label
+                >
+                <input type="text" placeholder="Specify..." />
+              </div>
             </div>
-        </section>
+
+            <div class="input-group-custom full-width">
+              <label>Comment:</label>
+              <textarea rows="4" placeholder="How can we help you?"></textarea>
+            </div>
+
+            <button class="btn-submit" type="submit">Submit Request</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <script src="service.js"></script>
-</body>
+  </body>
 </html>
