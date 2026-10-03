@@ -217,20 +217,27 @@ body .container .card .btnservice {
 }
 
 .resume-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 37px;
+    width: 37px;
+    min-width: 37px;
+    height: 37px;
+    min-height: 37px;
+    padding: 0;
     background: linear-gradient(82.3deg, #965de9 10.8%, #6358ee 94.3%);
     border-radius: 50%;
-    width: 37px;
-    height: 37px;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .199);
     border: none;
 }
 
 .sign svg {
+    display: block;
     fill: white;
     width: 17px;
-    justify-content: center;
-    margin-left: 10%;
+    height: 17px;
 }
 
 .click-here {
