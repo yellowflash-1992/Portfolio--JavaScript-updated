@@ -4,16 +4,12 @@ var audio = document.getElementById("audioPlayer"),
 function settingtoggle() {
     const container = document.getElementById("setting-container"),
         settingLabel = document.getElementById("labelforsetting"),
-        visualBox = document.getElementById("visualmodetogglebuttoncontainer"),
-        soundBox = document.getElementById("soundtogglebuttoncontainer");
+        visualBox = document.getElementById("visualmodetogglebuttoncontainer");
     if (!container) return
     container.classList.toggle("settingactivate"),
     visualBox && visualBox.classList.toggle("visualmodeshow"),
-    soundBox && soundBox.classList.toggle("soundmodeshow"),
     settingLabel && settingLabel.setAttribute("aria-expanded", container.classList.contains("settingactivate"))
 }
-
-function playpause() {!1 == document.getElementById("switchforsound").checked ? audio.pause() : audio.play() }
 
 var THEME_STORAGE_KEY = "portfolio-theme";
 
@@ -54,9 +50,6 @@ function revealPortfolio() {
 
 setTimeout(dismissPreloader, 2500);
 "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", revealPortfolio) : revealPortfolio(), window.addEventListener("pageshow", dismissPreloader);
-let emptyArea = document.getElementById("emptyarea"),
-    mobileTogglemenu = document.getElementById("mobiletogglemenu");
-
 function hamburgerMenu() {
     const overlay = document.getElementById("menu-overlay");
     const mobileMenu = document.getElementById("mobiletogglemenu");
