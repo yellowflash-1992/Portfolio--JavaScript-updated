@@ -1411,7 +1411,7 @@ footer {
     display: none;
   }
 
-  .home {
+  .navbar .home {
     margin-right: -120px;
     width: 30% !important;
   }
@@ -1523,13 +1523,49 @@ footer {
     transition-duration: 0.3s;
   }
 
+  /* ===== MOBILE NAVBAR GLASS ===== */
+  .navbar {
+    background: rgba(17, 17, 27, 0.26);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0 10px 30px rgba(3, 5, 14, 0.3);
+  }
+
+  .navbar.scrolled {
+    background: rgba(17, 17, 27, 0.4);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+  }
+
+  /* Hamburger sits on the glass, keep the bars readable */
+  #hamburger-button {
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+  }
+
+  /* ===== KO-FI FLOATING WIDGET OFF ON MOBILE ===== */
+  div[id^="kofi-widget-overlay-"],
+  .floatingchat-container-wrap,
+  .floatingchat-container-wrap-mobi {
+    display: none !important;
+  }
+
   /* ===== MOBILE MENU FIX ===== */
   .mobiletogglemenu {
-    background: linear-gradient(
-      135deg,
-      rgba(17, 17, 27, 0.96),
-      rgba(12, 12, 18, 0.98)
-    );
+    background:
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(171, 92, 255, 0.22) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        circle at 15% 85%,
+        rgba(107, 197, 248, 0.18) 0%,
+        transparent 50%
+      ),
+      linear-gradient(135deg, rgba(17, 17, 27, 0.95), rgba(12, 12, 18, 0.97));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: none;
     border-radius: 0;
     z-index: 9990;
@@ -1547,7 +1583,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 24px 20px 24px 20px;
+    padding: 24px 16px;
     transform: translateX(100%);
     transition:
       transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
@@ -1555,7 +1591,9 @@ footer {
     visibility: hidden;
     pointer-events: none;
     box-shadow: none;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .mobiletogglemenu > * {
@@ -1620,7 +1658,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 18px;
-    padding: 24px 14px;
+    padding: 24px 12px;
     border-radius: 26px;
     background: linear-gradient(
       180deg,
@@ -1643,6 +1681,18 @@ footer {
     font-family: fira code;
     width: 100%;
     min-height: 46px;
+    margin: 0;
+  }
+
+  /* Raised + separated from the About/Skills/Projects group.
+     Negative top margin pulls it up, the larger bottom margin restores the
+     total height so the other items keep their exact positions. */
+  .mobile-navbar-tabs-li.home {
+    width: 100% !important;
+    margin: 0 !important;
+    margin-right: 0 !important;
+    margin-top: -12px !important;
+    margin-bottom: 30px !important;
   }
 
   .mobile-navbar-tabs-li a {
@@ -1651,7 +1701,8 @@ footer {
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding: 10px 16px;
+    padding: 10px 14px;
+    white-space: nowrap;
     border-radius: 999px;
     border: 1px solid transparent;
     background: rgba(255, 255, 255, 0.025);
@@ -1734,7 +1785,7 @@ footer {
   .bk {
     display: none;
   }
-  .home {
+  .navbar .home {
     margin-right: -120px;
     width: 30% !important;
   }
@@ -1794,7 +1845,7 @@ footer {
   .bk {
     display: none;
   }
-  .home {
+  .navbar .home {
     margin-right: -120px;
     width: 30% !important;
   }

@@ -16,9 +16,6 @@ function hamburgerMenu() {
     document.body.classList.toggle("stopscrolling");
     overlay.classList.toggle("show");
     mobileMenu.classList.toggle("show-toggle-menu");
-    document.getElementById("burger-bar1").classList.toggle("hamburger-animation1");
-    document.getElementById("burger-bar2").classList.toggle("hamburger-animation2");
-    document.getElementById("burger-bar3").classList.toggle("hamburger-animation3");
 }
 
 function hidemenubyli() {
@@ -27,9 +24,6 @@ function hidemenubyli() {
     document.body.classList.remove("stopscrolling");
     overlay.classList.remove("show");
     mobileMenu.classList.remove("show-toggle-menu");
-    document.getElementById("burger-bar1").classList.remove("hamburger-animation1");
-    document.getElementById("burger-bar2").classList.remove("hamburger-animation2");
-    document.getElementById("burger-bar3").classList.remove("hamburger-animation3");
 }
 const sections = document.querySelectorAll("section"),
     navLi = document.querySelectorAll(".navbar .navbar-tabs .navbar-tabs-ul li"),

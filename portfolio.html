@@ -652,40 +652,5 @@
         }
       });
     </script>
-    <script>
-      function hamburgerMenu() {
-        const menu = document.getElementById("mobiletogglemenu");
-        const overlay = document.getElementById("menu-overlay");
-        const bar1 = document.getElementById("burger-bar1");
-        const bar2 = document.getElementById("burger-bar2");
-        const bar3 = document.getElementById("burger-bar3");
-        const body = document.body;
-
-        menu.classList.toggle("show-toggle-menu");
-        if (overlay) overlay.classList.toggle("show");
-        body.classList.toggle("stopscrolling");
-
-        bar1.classList.toggle("hamburger-animation1");
-        bar2.classList.toggle("hamburger-animation2");
-        bar3.classList.toggle("hamburger-animation3");
-      }
-
-      function hidemenubyli() {
-        const menu = document.getElementById("mobiletogglemenu");
-        const overlay = document.getElementById("menu-overlay");
-        const bar1 = document.getElementById("burger-bar1");
-        const bar2 = document.getElementById("burger-bar2");
-        const bar3 = document.getElementById("burger-bar3");
-        const body = document.body;
-
-        menu.classList.remove("show-toggle-menu");
-        if (overlay) overlay.classList.remove("show");
-        body.classList.remove("stopscrolling");
-
-        bar1.classList.remove("hamburger-animation1");
-        bar2.classList.remove("hamburger-animation2");
-        bar3.classList.remove("hamburger-animation3");
-      }
-    </script>
   </body>
 </html>
