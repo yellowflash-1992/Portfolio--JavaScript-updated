@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="src/vendor/aos.css" />
     <link rel="stylesheet" href="CSS/portfolio.css" />
 
+    <!-- Theme bootstrap: apply the saved theme before first paint -->
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("portfolio-theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+          }
+        } catch (error) {
+          /* storage unavailable, keep the default dark theme */
+        }
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -78,6 +91,41 @@
             </li>
           </ul>
         </div>
+
+        <!-- Settings (theme only) -->
+        <div class="setting-container" id="setting-container">
+          <input type="checkbox" id="switchforsetting" onchange="settingtoggle()" />
+          <label
+            id="labelforsetting"
+            for="switchforsetting"
+            role="button"
+            tabindex="0"
+            aria-expanded="false"
+            aria-controls="visualmodetogglebuttoncontainer"
+            aria-label="Show settings"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"
+          ></label>
+
+          <div
+            class="visualmodetogglebuttoncontainer"
+            id="visualmodetogglebuttoncontainer"
+          >
+            <input
+              type="checkbox"
+              id="switchforvisualmode"
+              onchange="visualmode()"
+            />
+            <label
+              id="labelforvisualmode"
+              for="switchforvisualmode"
+              role="switch"
+              tabindex="0"
+              aria-checked="false"
+              aria-label="Light theme"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}"
+            ></label>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -131,6 +179,16 @@
             <a href="#projects">&#60;Projects /&#62;</a>
           </li>
         </ul>
+
+        <button
+          type="button"
+          class="mobile-themebtn"
+          id="mobile-themebtn"
+          role="switch"
+          aria-checked="false"
+          aria-label="Light theme"
+          onclick="visualmode()"
+        ></button>
       </div>
 
       <!-- About Section (remeber to fix the top right corner patch in future here below:) -->

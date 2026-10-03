@@ -1,11 +1,42 @@
 var audio = document.getElementById("audioPlayer"),
     loader = document.getElementById("preloader");
 
-function settingtoggle() { document.getElementById("setting-container").classList.toggle("settingactivate"), document.getElementById("visualmodetogglebuttoncontainer").classList.toggle("visualmodeshow"), document.getElementById("soundtogglebuttoncontainer").classList.toggle("soundmodeshow") }
+function settingtoggle() {
+    const container = document.getElementById("setting-container"),
+        settingLabel = document.getElementById("labelforsetting"),
+        visualBox = document.getElementById("visualmodetogglebuttoncontainer"),
+        soundBox = document.getElementById("soundtogglebuttoncontainer");
+    if (!container) return
+    container.classList.toggle("settingactivate"),
+    visualBox && visualBox.classList.toggle("visualmodeshow"),
+    soundBox && soundBox.classList.toggle("soundmodeshow"),
+    settingLabel && settingLabel.setAttribute("aria-expanded", container.classList.contains("settingactivate"))
+}
 
 function playpause() {!1 == document.getElementById("switchforsound").checked ? audio.pause() : audio.play() }
 
-function visualmode() { document.body.classList.toggle("light-mode"), document.querySelectorAll(".needtobeinvert").forEach(function(e) { e.classList.toggle("invertapplied") }) }
+var THEME_STORAGE_KEY = "portfolio-theme";
+
+function isLightMode() { return document.documentElement.classList.contains("light-mode") }
+
+function syncThemeControls() {
+    const light = isLightMode(),
+        themeSwitch = document.getElementById("switchforvisualmode");
+    themeSwitch && (themeSwitch.checked = light),
+    document.querySelectorAll("#labelforvisualmode, #mobile-themebtn").forEach(e => e.setAttribute("aria-checked", light)),
+    document.querySelectorAll(".needtobeinvert").forEach(e => e.classList.toggle("invertapplied", light))
+}
+
+function visualmode() {
+    document.documentElement.classList.toggle("light-mode"), syncThemeControls();
+    try { localStorage.setItem(THEME_STORAGE_KEY, isLightMode() ? "light" : "dark") } catch (error) {}
+}
+
+(function restoreSavedTheme() {
+    let saved = null;
+    try { saved = localStorage.getItem(THEME_STORAGE_KEY) } catch (error) {}
+    "light" === saved && document.documentElement.classList.add("light-mode"), syncThemeControls()
+})();
 window.addEventListener("load", function() { loader.style.display = "none", document.querySelector(".hey").classList.add("popup") });
 let emptyArea = document.getElementById("emptyarea"),
     mobileTogglemenu = document.getElementById("mobiletogglemenu");
