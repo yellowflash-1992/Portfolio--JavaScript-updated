@@ -35,3 +35,11 @@
 .sci {
   margin-right: 10px;
 }
+
+/* Mobile only: a touch more centre separation between the Resume/CV pair and
+   the Portfolio/Enter pair in the FIRST card (second card untouched). */
+@media (max-width: 768px) {
+  body .container .card:first-child .sci li:nth-child(2) {
+    margin-right: 16px;
+  }
+}
