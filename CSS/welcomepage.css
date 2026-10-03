@@ -252,8 +252,11 @@ body .container .card .btnservice {
 } 
 
 .enterportf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: black;
-    padding: 5px;
+    padding: 0 5px;
     font-size: 17px !important;
     cursor: pointer; /* Shows a hand cursor on hover */
     transition: opacity 0.2s ease-in-out; /* Smooth fade effect */
@@ -262,7 +265,6 @@ body .container .card .btnservice {
 .enterportf:hover {
     opacity: 0.6; /* Subtle, clean transparency change */
 }
-
 
 #enterportf {
     margin-left: -30px;
