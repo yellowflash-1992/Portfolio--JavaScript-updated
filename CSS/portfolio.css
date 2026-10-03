@@ -11,7 +11,6 @@
   background-size: 60%;
 }
 
-#preloader,
 .invertapplied,
 .invertsettinglabel {
   filter: invert(1);
@@ -340,13 +339,61 @@ header {
 }
 
 #preloader {
-  background-color: #fff;
   position: fixed;
+  inset: 0;
   z-index: 99999;
   justify-content: center;
   overflow-y: hidden;
+  background-color: var(--color-dark-mode);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+#preloader::before {
+  content: "";
+  display: block;
+  flex: none;
+  width: clamp(72px, 10vw, 120px);
+  height: clamp(72px, 10vw, 120px);
   background-image: url(../src/svg/Pulse-0.4s-200px.svg);
-  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: invert(1);
+}
+
+.light-mode #preloader::before {
+  filter: none;
+}
+
+#preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #preloader {
+    transition:
+      opacity 0.15s linear,
+      visibility 0.15s linear;
+  }
+
+  #preloader::before {
+    width: clamp(64px, 8vw, 104px);
+    height: 4px;
+    border-radius: 4px;
+    background-image: linear-gradient(
+      90deg,
+      var(--color-purple),
+      var(--color-light-blue)
+    );
+    filter: none;
+  }
 }
 
 .navbar,

@@ -37,7 +37,23 @@ function visualmode() {
     try { saved = localStorage.getItem(THEME_STORAGE_KEY) } catch (error) {}
     "light" === saved && document.documentElement.classList.add("light-mode"), syncThemeControls()
 })();
-window.addEventListener("load", function() { loader.style.display = "none", document.querySelector(".hey").classList.add("popup") });
+var preloaderDismissed = false;
+
+function dismissPreloader() {
+    preloaderDismissed || (preloaderDismissed = !0, loader && loader.classList.add("preloader-hidden"))
+}
+
+function showHeyGreeting() {
+    const hey = document.querySelector(".hey");
+    hey && hey.classList.add("popup")
+}
+
+function revealPortfolio() {
+    showHeyGreeting(), dismissPreloader()
+}
+
+setTimeout(dismissPreloader, 2500);
+"loading" === document.readyState ? document.addEventListener("DOMContentLoaded", revealPortfolio) : revealPortfolio(), window.addEventListener("pageshow", dismissPreloader);
 let emptyArea = document.getElementById("emptyarea"),
     mobileTogglemenu = document.getElementById("mobiletogglemenu");
 
