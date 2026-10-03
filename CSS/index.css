@@ -43,3 +43,13 @@
     margin-right: 16px;
   }
 }
+
+/* Narrow real phones (320-360px): trim only the two text labels so the row
+   keeps its clearance from the card edges. Icon, Enter button, item margins and
+   .sci centering are untouched. */
+@media (max-width: 360px) {
+  body .container .card:first-child .sci .resume-link,
+  body .container .card:first-child .sci .portfolio-link {
+    font-size: 18px;
+  }
+}
