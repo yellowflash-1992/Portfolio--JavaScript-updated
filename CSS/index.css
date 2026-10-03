@@ -40,7 +40,7 @@
    the Portfolio/Enter pair in the FIRST card (second card untouched). */
 @media (max-width: 768px) {
   body .container .card:first-child .sci li:nth-child(2) {
-    margin-right: 16px;
+    margin-right: 8px;
   }
 }
 
@@ -49,6 +49,6 @@
    item margins and .sci centering are untouched. */
 @media (max-width: 360px) {
   body .container .card:first-child .sci li:nth-child(2) {
-    margin-right: 10px;
+    margin-right: 6px;
   }
 }
