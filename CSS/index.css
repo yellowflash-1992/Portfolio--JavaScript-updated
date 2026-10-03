@@ -44,12 +44,11 @@
   }
 }
 
-/* Narrow real phones (320-360px): trim only the two text labels so the row
-   keeps its clearance from the card edges. Icon, Enter button, item margins and
-   .sci centering are untouched. */
+/* Narrow real phones (320-360px): pull the two action groups back together so
+   the row stays narrower and clears the card edges. Type, icon, Enter button,
+   item margins and .sci centering are untouched. */
 @media (max-width: 360px) {
-  body .container .card:first-child .sci .resume-link,
-  body .container .card:first-child .sci .portfolio-link {
-    font-size: 18px;
+  body .container .card:first-child .sci li:nth-child(2) {
+    margin-right: 10px;
   }
 }
