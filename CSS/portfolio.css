@@ -5,14 +5,12 @@
   background-position: center;
 }
 
-#labelforsetting,
-#labelforsound {
+#labelforsetting {
   height: 40px;
   background-size: 60%;
 }
 
-.invertapplied,
-.invertsettinglabel {
+.invertapplied {
   filter: invert(1);
 }
 
@@ -137,10 +135,8 @@ html {
   --font-display: "Passions Conflict", cursive;
 }
 
-#hello-friend,
 .footer-bottom article,
 .getintouch-heading article,
-.language-speak article,
 .navbar-tabs-ul li,
 .two-words article {
   font-family: var(--font-base), "Fira Code", monospace;
@@ -216,7 +212,6 @@ html {
   cursor: pointer;
 }
 
-.soundtogglebuttoncontainer,
 .visualmodetogglebuttoncontainer {
   align-items: center;
   width: fit-content;
@@ -240,7 +235,6 @@ html {
 }
 
 #switchforsetting,
-#switchforsound,
 #switchforvisualmode,
 .hamburger,
 .mobiletogglemenu {
@@ -286,14 +280,6 @@ html {
   outline-offset: 3px;
 }
 
-.soundtogglebuttoncontainer {
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  transform: translate(-130px) scale(0);
-}
-
-#labelforsound,
 #preloader {
   display: flex;
   align-items: center;
@@ -301,33 +287,9 @@ html {
   background-position: center;
 }
 
-.soundmodeshow {
-  transition-delay: 0.1s;
-  transition-duration: 0.5s;
-  display: inline-block;
-  transform: translate(0) scale(1);
-}
-
 .logo,
 .logo:hover {
   transition-duration: 1s;
-}
-
-#labelforsound {
-  position: relative;
-  justify-content: center;
-  width: 40px;
-  background-image: url(../src/svg/Mute_Icon.svg);
-  cursor: pointer;
-  transition-duration: 0.5s;
-}
-
-#switchforsound:checked + #labelforsound {
-  transition-duration: 0.5s;
-  background-image: url(../src/svg/Speaker_Icon.svg);
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 header {
@@ -549,11 +511,9 @@ h3,
   opacity: 0;
 }
 
-#hello-friend,
 #work,
 .about-info p,
-.activeThistab,
-.language-speak article {
+.activeThistab {
   color: var(--color-white);
 }
 
@@ -654,7 +614,6 @@ h3,
   position: relative;
 }
 
-#info-para,
 .about-info p {
   font-weight: 400;
   font-size: 2rem;
@@ -680,12 +639,8 @@ h3,
   position: relative;
 }
 
-.projects-heading-article,
-.projectsHeadingP,
 .section-heading-article,
-.sectionHeadingP,
-.skills-heading-article,
-.skillsHeadingP {
+.sectionHeadingP {
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -776,9 +731,7 @@ h3,
   justify-content: center;
 }
 
-.projects-heading,
-.section-heading,
-.skills-heading {
+.section-heading {
   width: 100%;
   display: flex;
   align-items: center;
@@ -792,9 +745,7 @@ h3,
   width: 300px;
 }
 
-.projects-heading-article,
-.section-heading-article,
-.skills-heading-article {
+.section-heading-article {
   font-size: 3rem;
   font-family: var(--font-base), "Fira Code", monospace;
   font-weight: 500;
@@ -808,9 +759,7 @@ h3,
   -webkit-text-fill-color: transparent;
 }
 
-.projectsHeadingP,
-.sectionHeadingP,
-.skillsHeadingP {
+.sectionHeadingP {
   width: 300px;
   height: 1px;
   background-image: linear-gradient(
@@ -871,21 +820,10 @@ h3,
   justify-content: center;
 }
 
-.language-speak,
 .tech-stack-wrapper {
   width: 100%;
   display: flex;
   align-items: center;
-}
-
-.language-speak {
-  height: 50px;
-  justify-content: center;
-}
-
-.language-speak article {
-  font-size: 2rem;
-  font-weight: 600;
 }
 
 .frontend-dev-section {
@@ -1044,10 +982,6 @@ footer {
 .faviconforProject {
   width: 30px;
   border-radius: 50%;
-}
-
-.faviconforProjectAquaregia {
-  width: 20px;
 }
 
 .image-div {
@@ -1285,7 +1219,6 @@ footer {
   font-weight: 700;
 }
 
-.fa-copyright,
 .footer-bottom article {
   font-size: 1.5rem;
   color: #b0b0b0;
@@ -1410,10 +1343,6 @@ footer {
   z-index: 3;
 }
 
-.tonechange {
-  color: #000;
-}
-
 /* ===== LIGHT MODE: FOOTER ===== */
 .light-mode .footer-background {
   background-color: rgba(255, 255, 255, 0.55);
@@ -1462,8 +1391,7 @@ footer {
     font-size: 60%;
   }
   .projects-section-div,
-  .skills-section,
-  .text-content {
+  .skills-section {
     width: 80%;
   }
   .about-section {
@@ -1550,10 +1478,7 @@ footer {
   }
 
   .activeThismobiletab:before,
-  .burger-bar,
-  .hamburger-animation1,
-  .hamburger-animation2,
-  .hamburger-animation3 {
+  .burger-bar {
     background-color: var(--color-white);
   }
 
@@ -1592,22 +1517,6 @@ footer {
   }
   #burger-bar2 {
     width: 100%;
-  }
-
-  .hamburger-animation1 {
-    transform: rotate(45deg) scaleX(1.7);
-    transition-duration: 0.3s;
-    transform-origin: left;
-  }
-
-  .hamburger-animation2 {
-    transform: scaleX(0);
-  }
-
-  .hamburger-animation3 {
-    transform: rotateZ(-45deg) scaleX(1.7);
-    transform-origin: left;
-    transition-duration: 0.3s;
   }
 
   /* ===== MOBILE NAVBAR GLASS ===== */
@@ -1982,29 +1891,9 @@ footer {
     margin-right: -120px;
     width: 30% !important;
   }
-  .text-content {
-    padding-left: 0;
-    width: 80%;
-  }
-  #hello-friend {
-    height: 100px;
-    font-size: 3.5rem;
-  }
   #name,
   #work {
     font-size: 5.5rem;
-  }
-  #info-para,
-  .language-name {
-    width: 100%;
-  }
-  .contact-btn-div {
-    height: 140px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 20px;
   }
   .setting-container {
     margin-left: 0;
@@ -2051,7 +1940,6 @@ footer {
     height: 115px;
     align-items: flex-end;
   }
-  #hello-friend,
   .two-words article {
     font-size: 2.5rem;
   }
@@ -2061,12 +1949,6 @@ footer {
   .logo:hover {
     transform: translateY(200px);
     transition-duration: 1s;
-  }
-  .landing-page-container {
-    height: 85vh;
-  }
-  .text-content {
-    justify-content: flex-start;
   }
   .project-box {
     height: 550px;
@@ -2134,9 +2016,6 @@ footer {
   html {
     font-size: 42%;
   }
-  .language-name article {
-    text-align: center;
-  }
   .two-words {
     align-items: flex-end;
     height: 50px;
@@ -2153,13 +2032,6 @@ footer {
   }
   .logos {
     gap: 20px;
-  }
-}
-
-@media only screen and (max-width: 1300px) and (max-height: 730px) {
-  .landing-page-container {
-    height: fit-content;
-    margin-top: 100px;
   }
 }
 
@@ -2228,11 +2100,6 @@ footer {
   justify-content: center;
   width: 100%;
   height: 100%;
-}
-
-.home:hover .tooltip1 {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* ===== BLOB1 ===== */
