@@ -428,12 +428,18 @@ noscript {
   background-color: transparent;
 }
 
-/* Base Navbar -- fully transparent at the top */
+/* Base Navbar */
 .navbar {
-  background: rgba(17, 17, 27, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background: rgba(17, 17, 27, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border: none;
+  border-radius: 50px;
+  height: 80px;
+  width: 80%;
+  padding: 0 20px;
+  justify-content: space-between;
+  z-index: 1000;
   box-shadow: none;
   transition:
     background 0.4s ease,
@@ -447,27 +453,6 @@ noscript {
   background: rgba(17, 17, 27, 0.85);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
-  border: none;
-  box-shadow: none;
-}
-
-.navbar {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--tech-stack-box-first-color),
-    var(--tech-stack-box-second-color)
-  );
-  background: rgba(17, 17, 27, 0.6);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: none;
-  border-radius: 50px;
-  height: 80px;
-  width: 80%;
-  padding: 0 20px;
-  justify-content: space-between;
-  z-index: 1000;
-  box-shadow: none;
 }
 
 .navbar-tabs,
