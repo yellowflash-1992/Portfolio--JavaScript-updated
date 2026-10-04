@@ -5,11 +5,6 @@
   background-position: center;
 }
 
-#labelforsetting {
-  height: 40px;
-  background-size: 60%;
-}
-
 .invertapplied {
   filter: invert(1);
 }
