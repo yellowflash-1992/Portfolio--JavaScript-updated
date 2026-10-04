@@ -540,20 +540,17 @@ h3,
 
 .face {
   position: absolute;
-}
-
-.logo-top img {
-  height: 100%;
-  z-index: 2;
-}
-
-.face {
   height: 74%;
   bottom: 0;
   justify-content: center;
   gap: 5px;
   z-index: 1;
   padding-left: 1px;
+}
+
+.logo-top img {
+  height: 100%;
+  z-index: 2;
 }
 
 .eye {
