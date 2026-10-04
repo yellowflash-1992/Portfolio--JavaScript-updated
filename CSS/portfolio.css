@@ -1793,10 +1793,6 @@ footer {
     border-radius: 50%;
   }
 
-  .projects-section-div {
-    width: 80%;
-  }
-
   .project-box {
     flex-direction: column;
     height: 800px;
@@ -1843,9 +1839,6 @@ footer {
   .logo:hover {
     transform: translateY(200px);
     transition-duration: 1s;
-  }
-  .projects-section-div {
-    width: 80%;
   }
   .project-boxes-div {
     padding: 40px 0;
