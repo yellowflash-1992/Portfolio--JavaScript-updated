@@ -101,3 +101,63 @@ const mouseMove = e => {
     },
     windowResize = e => { mouseXEndPoint = window.innerWidth, mouseYEndPoint = window.innerHeight, mouseXRange = mouseXEndPoint - mouseXStartPoint };
 window.addEventListener("mousemove", mouseMove), window.addEventListener("resize", windowResize);
+function openURL() {
+    window.open("src/pdf/yellowflash's Resume.pdf", "_blank");
+}
+
+const cursorInner = document.getElementById("cursor-inner");
+const cursorOuter = document.getElementById("cursor-outer");
+const links = document.querySelectorAll("a,label,button");
+
+document.addEventListener("mousemove", function (e) {
+    const posX = e.clientX;
+    const posY = e.clientY;
+    cursorInner.style.left = posX + "px";
+    cursorInner.style.top = posY + "px";
+    cursorOuter.animate(
+        {
+            left: posX + "px",
+            top: posY + "px",
+        },
+        {
+            duration: 500,
+            fill: "forwards",
+        },
+    );
+});
+
+links.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+        cursorInner.classList.add("hover");
+        cursorOuter.classList.add("hover");
+    });
+    link.addEventListener("mouseleave", () => {
+        cursorInner.classList.remove("hover");
+        cursorOuter.classList.remove("hover");
+    });
+});
+
+const backButton = document.querySelector(".home.bk");
+const tooltip = document.getElementById("global-tooltip");
+
+if (backButton && tooltip) {
+    backButton.addEventListener("mouseenter", function (e) {
+        const rect = this.getBoundingClientRect();
+        tooltip.style.left = rect.left + rect.width / 1.5 + "px";
+        tooltip.style.top = rect.bottom + 8 + "px";
+        tooltip.style.transform = "translateX(-50%)";
+        tooltip.classList.add("visible");
+    });
+    backButton.addEventListener("mouseleave", function () {
+        tooltip.classList.remove("visible");
+    });
+}
+
+window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 80) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
