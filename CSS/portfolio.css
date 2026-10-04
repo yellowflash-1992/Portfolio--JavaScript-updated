@@ -22,24 +22,19 @@ noscript {
   z-index: 1000;
 }
 
-body {
-  background-color: var(--color-dark-mode);
-}
-
-body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
+html {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 body {
+  background-color: var(--color-dark-mode);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
   position: relative;
   min-height: 100%;
   overscroll-behavior-x: none;
