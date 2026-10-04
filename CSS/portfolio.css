@@ -1125,11 +1125,19 @@ footer {
   height: 100%;
 }
 
-.getintouch-heading,
+.getintouch-heading {
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+
 .logos {
   height: 80px;
   width: 100%;
   display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .two-words article {
@@ -1181,12 +1189,6 @@ footer {
 .footer-bottom article {
   font-size: 1.5rem;
   color: #b0b0b0;
-}
-
-.logos {
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
 }
 
 .SocialHandle {
