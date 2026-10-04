@@ -422,12 +422,6 @@ noscript {
   z-index: 1000;
 }
 
-.fakenavbar {
-  height: 0;
-  width: 0%;
-  background-color: transparent;
-}
-
 /* Base Navbar */
 .navbar {
   background: rgba(17, 17, 27, 0.6);
