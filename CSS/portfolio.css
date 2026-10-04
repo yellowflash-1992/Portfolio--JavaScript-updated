@@ -212,17 +212,14 @@ html {
   cursor: pointer;
 }
 
-.visualmodetogglebuttoncontainer {
-  align-items: center;
-  width: fit-content;
-  transition-duration: 0.3s;
-}
-
 .settingactivate {
   width: 200px;
 }
 
 .visualmodetogglebuttoncontainer {
+  align-items: center;
+  width: fit-content;
+  transition-duration: 0.3s;
   height: fit-content;
   display: flex;
   justify-content: center;
