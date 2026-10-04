@@ -1379,16 +1379,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  html {
-    font-size: 60%;
-  }
-}
-
 @media screen and (max-width: 1200px) {
-  html {
-    font-size: 60%;
-  }
   .projects-section-div,
   .skills-section {
     width: 80%;
@@ -1403,12 +1394,6 @@ footer {
   .logo:hover {
     transform: translateY(200px);
     transition-duration: 1s;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  html {
-    font-size: 60%;
   }
 }
 
