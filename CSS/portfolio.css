@@ -614,22 +614,6 @@ h3,
   position: relative;
 }
 
-.section-heading-article,
-.sectionHeadingP {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    var(--static-heading-gradient-blue),
-    var(--static-heading-gradient-pink)
-  );
-  background-image: -webkit-linear-gradient(
-    left,
-    var(--static-heading-gradient-blue),
-    var(--static-heading-gradient-pink)
-  );
-}
-
 .dp::after,
 .dp::before,
 .text {
