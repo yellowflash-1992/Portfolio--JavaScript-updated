@@ -365,7 +365,6 @@ noscript {
   position: fixed;
 }
 
-#name,
 .getintouch-heading article {
   background: -webkit-linear-gradient(
     135deg,
@@ -1891,7 +1890,6 @@ footer {
     margin-right: -120px;
     width: 30% !important;
   }
-  #name,
   #work {
     font-size: 5.5rem;
   }
@@ -2130,32 +2128,6 @@ footer {
   to {
     opacity: 0.35;
     transform: scale(1.05);
-  }
-}
-
-/* ===== NAME GRADIENT ===== */
-#name {
-  background: linear-gradient(
-    -45deg,
-    var(--color-light-blue),
-    var(--color-light-purple),
-    var(--color-light-blue),
-    var(--color-light-purple)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-size: 400% 400%;
-  -webkit-animation: 3s infinite gradient;
-  animation: 3s infinite gradient;
-}
-
-@keyframes gradient {
-  0%,
-  100% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
   }
 }
 
