@@ -1,5 +1,4 @@
-var audio = document.getElementById("audioPlayer"),
-    loader = document.getElementById("preloader");
+var loader = document.getElementById("preloader");
 
 function settingtoggle() {
     const container = document.getElementById("setting-container"),
