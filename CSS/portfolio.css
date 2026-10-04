@@ -1344,7 +1344,6 @@ footer {
   }
   .logo:hover {
     transform: translateY(200px);
-    transition-duration: 1s;
   }
 }
 
@@ -1837,7 +1836,6 @@ footer {
   }
   .logo:hover {
     transform: translateY(200px);
-    transition-duration: 1s;
   }
   .project-boxes-div {
     padding: 40px 0;
@@ -1875,7 +1873,6 @@ footer {
   }
   .logo:hover {
     transform: translateY(200px);
-    transition-duration: 1s;
   }
   .project-box {
     height: 550px;
