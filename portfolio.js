@@ -141,7 +141,7 @@ const backButton = document.querySelector(".home.bk");
 const tooltip = document.getElementById("global-tooltip");
 
 if (backButton && tooltip) {
-    backButton.addEventListener("mouseenter", function (e) {
+    backButton.addEventListener("mouseenter", function () {
         const rect = this.getBoundingClientRect();
         tooltip.style.left = rect.left + rect.width / 1.5 + "px";
         tooltip.style.top = rect.bottom + 8 + "px";
