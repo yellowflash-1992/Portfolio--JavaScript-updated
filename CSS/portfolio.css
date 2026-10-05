@@ -1811,9 +1811,6 @@ footer {
   html {
     font-size: 50%;
   }
-  #about {
-    margin-top: 20%;
-  }
   .bk {
     display: none;
   }
@@ -1845,9 +1842,6 @@ footer {
 @media screen and (max-width: 500px) {
   html {
     font-size: 45%;
-  }
-  #about {
-    margin-top: 20%;
   }
   .bk {
     display: none;
