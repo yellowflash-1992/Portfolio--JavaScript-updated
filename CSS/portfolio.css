@@ -1347,8 +1347,7 @@ footer {
     width: 30% !important;
   }
 
-  #hamburger-button,
-  .hamburger {
+  #hamburger-button {
     background-color: transparent;
   }
 
@@ -1380,6 +1379,7 @@ footer {
   }
 
   .hamburger {
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
