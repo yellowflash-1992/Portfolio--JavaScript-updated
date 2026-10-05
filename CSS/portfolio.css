@@ -1760,10 +1760,6 @@ footer {
     gap: 30px;
   }
 
-  .about-info {
-    flex-direction: column;
-  }
-
   .dp {
     align-items: center;
     justify-content: center;
