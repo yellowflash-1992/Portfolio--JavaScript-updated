@@ -235,7 +235,6 @@ html {
 
 #switchforsetting:checked + #labelforsetting {
   transform: rotate(180deg);
-  transition-duration: 0.5s;
 }
 
 #labelforvisualmode {
@@ -250,7 +249,6 @@ html {
 
 #switchforvisualmode:checked + #labelforvisualmode {
   transform: rotate(360deg);
-  transition-duration: 0.5s;
   background-image: url(../src/png/sun.png);
   background-size: 60%;
 }
