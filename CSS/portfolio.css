@@ -761,6 +761,10 @@ h3,
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
 }
 
 .frontend-dev-section {
@@ -806,13 +810,6 @@ h3,
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.tech-stack-wrapper {
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  margin-top: 50px;
 }
 
 .tech-stack-box,
