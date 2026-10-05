@@ -349,13 +349,6 @@ header {
 }
 
 .getintouch-heading article {
-  background: -webkit-linear-gradient(
-    135deg,
-    var(--color-light-blue),
-    var(--color-light-purple),
-    var(--color-light-blue),
-    var(--color-light-purple)
-  );
   -webkit-text-fill-color: transparent;
 }
 
