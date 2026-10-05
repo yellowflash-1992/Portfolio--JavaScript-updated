@@ -99,7 +99,7 @@ const mouseMove = e => {
             o = pupilStartPoint + fracYValue * pupilRangeY;
         pupilsArr.forEach(e => { e.style.transform = `translate(${t}px, ${o}px)` })
     },
-    windowResize = e => { mouseXEndPoint = window.innerWidth, mouseYEndPoint = window.innerHeight, mouseXRange = mouseXEndPoint - mouseXStartPoint };
+    windowResize = () => { mouseXEndPoint = window.innerWidth, mouseYEndPoint = window.innerHeight, mouseXRange = mouseXEndPoint - mouseXStartPoint };
 window.addEventListener("mousemove", mouseMove), window.addEventListener("resize", windowResize);
 function openURL() {
     window.open("src/pdf/yellowflash's Resume.pdf", "_blank");
