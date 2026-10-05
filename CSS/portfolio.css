@@ -1757,7 +1757,6 @@ footer {
 
   .info-dp-section {
     flex-direction: column;
-    margin-top: 30px;
     gap: 30px;
   }
 
