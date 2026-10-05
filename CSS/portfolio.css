@@ -224,7 +224,6 @@ html {
 }
 
 .visualmodeshow {
-  transition-duration: 0.3s;
   transform: translate(0) scale(1);
 }
 
