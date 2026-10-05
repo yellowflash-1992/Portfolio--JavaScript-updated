@@ -640,7 +640,6 @@ h3 {
 
 .about-section-container {
   width: 100%;
-  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
