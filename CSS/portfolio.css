@@ -198,11 +198,13 @@ html {
 
 #labelforsetting {
   width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
   background-image: url(../src/svg/settings-svgrepo-com.svg);
+  background-size: contain;
   transition-duration: 0.5s;
   cursor: pointer;
 }
@@ -256,11 +258,6 @@ html {
 /* ===== SETTINGS / THEME CONTROL ===== */
 .navbar > .setting-container {
   flex-shrink: 0;
-}
-
-#labelforsetting {
-  height: 40px;
-  background-size: contain;
 }
 
 #labelforsetting:focus-visible,
