@@ -1317,7 +1317,7 @@ footer {
   }
 
   .home.bk {
-    display: none;
+    display: none !important;
   }
 
   .bk {
