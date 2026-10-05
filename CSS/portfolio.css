@@ -348,12 +348,6 @@ header {
   }
 }
 
-.navbar {
-  display: flex;
-  align-items: center;
-  position: fixed;
-}
-
 .getintouch-heading article {
   background: -webkit-linear-gradient(
     135deg,
@@ -367,6 +361,9 @@ header {
 
 /* Base Navbar */
 .navbar {
+  display: flex;
+  align-items: center;
+  position: fixed;
   background: rgba(17, 17, 27, 0.6);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
