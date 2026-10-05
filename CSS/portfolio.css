@@ -1795,9 +1795,6 @@ footer {
   .logo {
     width: 18%;
   }
-  .logo:hover {
-    transform: translateY(200px);
-  }
   .project-boxes-div {
     padding: 40px 0;
   }
@@ -1828,9 +1825,6 @@ footer {
   }
   .hey {
     left: 70px;
-  }
-  .logo:hover {
-    transform: translateY(200px);
   }
   .project-box {
     height: 550px;
