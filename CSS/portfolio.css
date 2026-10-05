@@ -389,10 +389,11 @@ header {
   -webkit-backdrop-filter: blur(25px);
 }
 
-.navbar-tabs,
-.navbar-tabs-ul {
+.navbar-tabs {
   height: 100%;
   align-items: center;
+  display: flex;
+  width: 80%;
 }
 
 .logo,
@@ -401,12 +402,9 @@ header {
   display: flex;
 }
 
-.navbar-tabs {
-  display: flex;
-  width: 80%;
-}
-
 .navbar-tabs-ul {
+  height: 100%;
+  align-items: center;
   width: 100%;
   display: flex;
   list-style: none;
