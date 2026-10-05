@@ -342,10 +342,6 @@ header {
   }
 }
 
-.getintouch-heading article {
-  -webkit-text-fill-color: transparent;
-}
-
 /* Base Navbar */
 .navbar {
   display: flex;
@@ -1134,6 +1130,7 @@ footer {
 }
 
 .getintouch-heading article {
+  -webkit-text-fill-color: transparent;
   font-size: 2rem;
   background: linear-gradient(
     -45deg,
