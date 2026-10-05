@@ -1771,10 +1771,6 @@ footer {
   .bk {
     display: none;
   }
-  .navbar .home {
-    margin-right: -120px;
-    width: 30% !important;
-  }
   #work {
     font-size: 5.5rem;
   }
@@ -1799,10 +1795,6 @@ footer {
   }
   .bk {
     display: none;
-  }
-  .navbar .home {
-    margin-right: -120px;
-    width: 30% !important;
   }
   .hamburgerbase,
   .navbar {
