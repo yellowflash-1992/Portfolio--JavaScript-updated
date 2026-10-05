@@ -623,19 +623,16 @@ h3,
 .resume-btn:hover {
   width: 130px;
   border-radius: 40px;
-  transition-duration: 0.3s;
 }
 
 .resume-btn:hover .sign {
   width: 30%;
-  transition-duration: 0.3s;
   padding-left: 20px;
 }
 
 .resume-btn:hover .text {
   opacity: 1;
   width: 70%;
-  transition-duration: 0.3s;
   padding-right: 10px;
 }
 
