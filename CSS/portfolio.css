@@ -1845,9 +1845,6 @@ footer {
 }
 
 @media screen and (max-width: 430px) {
-  html {
-    font-size: 45%;
-  }
   .info-div {
     padding: 0 30px;
   }
@@ -1878,9 +1875,6 @@ footer {
 }
 
 @media screen and (max-width: 300px) {
-  html {
-    font-size: 42%;
-  }
   .two-words {
     align-items: flex-end;
   }
