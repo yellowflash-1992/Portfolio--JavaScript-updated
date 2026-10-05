@@ -452,12 +452,6 @@ h3 {
   margin-top: 25px;
 }
 
-.face {
-  width: 100%;
-  align-items: center;
-  display: flex;
-}
-
 .hey {
   color: #fff;
   position: absolute;
@@ -517,6 +511,9 @@ h3 {
 }
 
 .face {
+  width: 100%;
+  align-items: center;
+  display: flex;
   position: absolute;
   height: 74%;
   bottom: 0;
