@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services | Portfolio</title>
+    <meta
+      name="description"
+      content="Explore the design and development services I can help with, and get in touch about your project."
+    />
+    <title>Services | Yellowflash</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("yellowflash-services-theme");
+        document.documentElement.dataset.theme =
+          savedTheme === "light" ? "light" : "dark";
+      } catch (error) {
+        console.warn("Unable to read the saved Services theme.", error);
+      }
+    </script>
     <link rel="stylesheet" href="CSS/service.css" />
     <link
       rel="stylesheet"
@@ -11,194 +24,369 @@
     />
   </head>
   <body>
-    <!-- Navigation / Header -->
     <header class="glass-panel top-nav">
-      <div class="nav-buttons">
+      <nav class="nav-buttons" aria-label="Main navigation">
         <a class="btn-primary" href="index.html">Welcome Page</a>
         <a class="btn-secondary" href="portfolio.html">Portfolio</a>
-      </div>
+      </nav>
       <h1 class="page-title">
-        <span class="text-purple">Welcome to</span>
-        <span class="text-neon">Service Page</span>
+        <span class="text-purple">Services</span>
+        <span class="text-neon">| Yellowflash</span>
       </h1>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Light theme"
+        aria-pressed="false"
+        title="Light theme"
+      >
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.2 15.5A8.5 8.5 0 0 1 8.5 3.8 8.5 8.5 0 1 0 20.2 15.5Z"></path>
+        </svg>
+      </button>
     </header>
 
     <main class="container">
-      <!-- Section 1: Aim & Services -->
-      <section class="glass-panel dual-col">
+      <section class="glass-panel dual-col" aria-labelledby="services-heading">
         <div class="col-left">
-          <div class="badge">Our Aim</div>
-          <h3>We Focus on your story</h3>
+          <p class="badge">A personal approach</p>
+          <h2 id="services-heading">Thoughtful digital work, built around your goals</h2>
           <p class="lead-text">
-            We focus on clean code and efficient design, ensuring seamless
-            interactions that align with user expectations and business
-            objectives.
+            I bring design and development together to create clear, considered
+            digital experiences. Tell me what you are working toward, and we can
+            shape the right next step for your project.
           </p>
           <div class="gallery-link">
-            <p><b>TO VIEW/VISIT OUR WORK GALLERY:</b></p>
+            <p><strong>Explore my work</strong></p>
             <p>
-              Click here:
-              <a href="https://github.com/yellowflash-1992"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+              Browse the projects on
+              <a
+                href="https://github.com/yellowflash-1992"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Yellowflash's projects on GitHub (opens in a new tab)"
+              >
+                GitHub <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>.
             </p>
           </div>
         </div>
 
         <div class="col-right">
-          <div class="badge">Our Services</div>
+          <p class="badge">How I can help</p>
+          <h2 class="services-heading">Services</h2>
           <ul class="service-list">
-            <li>Website Design</li>
-            <li>Graphic Design</li>
-            <li>Video Editing</li>
-            <li>Digital Marketing</li>
-            <li>and more...</li>
+            <li>
+              <span>Website design and development
+                <small>Responsive sites with clear structure and purposeful interactions.</small>
+              </span>
+            </li>
+            <li>
+              <span>Graphic design
+                <small>Visual assets for a consistent, clear presentation.</small>
+              </span>
+            </li>
+            <li>
+              <span>Video editing
+                <small>Editing that keeps the story and message easy to follow.</small>
+              </span>
+            </li>
+            <li>
+              <span>Digital marketing
+                <small>Support for presenting and promoting your work online.</small>
+              </span>
+            </li>
           </ul>
 
           <div class="social-wrapper">
-            <h3>Socials:</h3>
-            <ul class="socials">
+            <h3>Find me online</h3>
+            <ul class="socials" aria-label="Social profiles">
               <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a
+                  href="https://www.instagram.com/yellowflash_1992/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram (opens in a new tab)"
+                ><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a
+                  href="https://www.linkedin.com/in/yellowflash"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn (opens in a new tab)"
+                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a
+                  href="https://github.com/yellowflash-1992"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub (opens in a new tab)"
+                ><i class="fa-brands fa-github" aria-hidden="true"></i></a>
               </li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Section 2: Contact & Form -->
-      <section class="glass-panel dual-col contact-section">
+      <section
+        class="glass-panel dual-col contact-section"
+        aria-labelledby="contact-heading"
+      >
         <div class="col-left contact-info">
-          <h2 class="title-accent">Contact Us</h2>
+          <p class="badge">Start a conversation</p>
+          <h2 class="title-accent" id="contact-heading">Contact me</h2>
           <div class="info-block">
-            <h3>Address:</h3>
-            <p>
-              Times Square, Unguwan Gimbia<br />Sabon Tasha<br />Sabo signboard,
-              Kaduna State
-            </p>
+            <h3>Location</h3>
+            <address>
+              Times Square, Unguwan Gimbia<br />
+              Sabon Tasha<br />
+              Sabo signboard, Kaduna State
+            </address>
           </div>
           <div class="info-block">
-            <h3>Reach out at:</h3>
-            <p>Email: yellowflash@yahoo.com<br />Phone: +234 91 623 84050</p>
+            <h3>Get in touch</h3>
+            <p>
+              Email:
+              <a href="mailto:abdulnasirmuhammad989@gmail.com">abdulnasirmuhammad989@gmail.com</a><br />
+              Phone:
+              <a href="tel:+2349162384050">+234 91 623 84050</a>
+            </p>
           </div>
         </div>
 
         <div class="col-right form-wrapper">
-          <h2 class="form-title">REQUEST FORM</h2>
-          <form action="" method="post" class="request-form">
+          <h2 class="form-title" id="request-heading">Project request</h2>
+          <p class="form-intro">
+            Share a few details to help frame your project. Fields marked
+            <span class="required-marker" aria-label="required">*</span> are required.
+          </p>
+          <p class="form-status" id="form-status" aria-live="polite">
+            Your request will be sent securely through Formspree.
+          </p>
+          <form
+            class="request-form"
+            action="https://formspree.io/f/xgaoejwn"
+            method="POST"
+            aria-labelledby="request-heading"
+          >
+            <input
+              type="hidden"
+              name="subject"
+              value="New Service Request — Yellowflash Portfolio"
+            />
             <div class="form-grid">
-              <div class="input-group-custom">
-                <label>Name <span class="required">*</span></label>
+              <fieldset class="input-group-custom full-width name-fields">
+                <legend>Name <span class="required-marker" aria-hidden="true">*</span></legend>
                 <div class="split-inputs">
-                  <input type="text" name="fname" placeholder="First Name" />
-                  <input type="text" name="lname" placeholder="Last Name" />
+                  <div>
+                    <label for="first-name">First name</label>
+                    <input
+                      id="first-name"
+                      type="text"
+                      name="firstName"
+                      placeholder="Your first name"
+                      autocomplete="given-name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="last-name">Last name</label>
+                    <input
+                      id="last-name"
+                      type="text"
+                      name="lastName"
+                      placeholder="Your last name"
+                      autocomplete="family-name"
+                      required
+                    />
+                  </div>
                 </div>
-              </div>
+              </fieldset>
 
               <div class="input-group-custom">
-                <label>Email <span class="required">*</span></label>
+                <label for="email">Email <span class="required-marker" aria-hidden="true">*</span></label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
-                  placeholder="example@mail.com"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
                 />
               </div>
 
               <div class="input-group-custom">
-                <label>Phone <span class="required">*</span></label>
+                <label for="phone-number">Phone <span class="required-marker" aria-hidden="true">*</span></label>
                 <div class="phone-input">
-                  <select name="country_code">
-                    <option value="USA">USA</option>
-                    <option value="NGA">NGA</option>
-                    <option value="UK">UK</option>
+                  <label class="visually-hidden" for="phone-country-code">Country calling code</label>
+                  <select
+                    id="phone-country-code"
+                    name="country_code"
+                    autocomplete="tel-country-code"
+                  >
+                    <option value="+234" selected>+234 Nigeria</option>
+                    <option value="+1">+1 United States</option>
+                    <option value="+44">+44 United Kingdom</option>
                   </select>
-                  <input type="tel" placeholder="(555) 000-0000" />
+                  <input
+                    id="phone-number"
+                    type="tel"
+                    name="phone"
+                    placeholder="Your phone number"
+                    autocomplete="tel-national"
+                    required
+                  />
                 </div>
               </div>
 
               <div class="input-group-custom full-width">
-                <label>Company <span class="required">*</span></label>
-                <input type="text" name="company" placeholder="Company Name" />
+                <label for="company">Company or organisation <span class="optional-label">(optional)</span></label>
+                <input
+                  id="company"
+                  type="text"
+                  name="company"
+                  placeholder="Company or organisation name"
+                  autocomplete="organization"
+                />
               </div>
 
-              <!-- Dropdowns leveraging your JS -->
               <div class="input-group-custom">
-                <label>Type of Business <span class="required">*</span></label>
+                <label for="business-size">Business size <span class="required-marker" aria-hidden="true">*</span></label>
                 <div class="input-group dropdown-wrapper">
                   <input
+                    id="business-size"
                     type="text"
                     class="form-control"
-                    placeholder="Please select"
+                    name="business_size"
+                    placeholder="Choose a size"
                     readonly
+                    required
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="business-size-options"
                   />
-                  <button class="btn dropdown-toggle" type="button">
-                    <span class="fa-solid fa-caret-down"></span>
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    aria-label="Choose business size"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="business-size-options"
+                  >
+                    <span class="fa-solid fa-caret-down" aria-hidden="true"></span>
                   </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Big</a></li>
-                    <li><a class="dropdown-item" href="#">Medium</a></li>
-                    <li><a class="dropdown-item" href="#">Small</a></li>
+                  <ul
+                    class="dropdown-menu"
+                    id="business-size-options"
+                    role="listbox"
+                    aria-label="Business size options"
+                  >
+                    <li role="none"><button class="dropdown-item" type="button" role="option" data-value="Large" aria-selected="false">Large</button></li>
+                    <li role="none"><button class="dropdown-item" type="button" role="option" data-value="Medium" aria-selected="false">Medium</button></li>
+                    <li role="none"><button class="dropdown-item" type="button" role="option" data-value="Small" aria-selected="false">Small</button></li>
                   </ul>
                 </div>
               </div>
 
               <div class="input-group-custom">
-                <label>Type of Website <span class="required">*</span></label>
+                <label for="website-type">Type of website <span class="required-marker" aria-hidden="true">*</span></label>
                 <div class="input-group dropdown-wrapper">
                   <input
+                    id="website-type"
                     type="text"
                     class="form-control"
-                    placeholder="Please select"
+                    name="website_type"
+                    placeholder="Choose a website type"
                     readonly
+                    required
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="website-type-options"
                   />
-                  <button class="btn dropdown-toggle" type="button">
-                    <span class="fa-solid fa-caret-down"></span>
+                  <button
+                    class="btn dropdown-toggle"
+                    type="button"
+                    aria-label="Choose website type"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="website-type-options"
+                  >
+                    <span class="fa-solid fa-caret-down" aria-hidden="true"></span>
                   </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">E-commerce</a></li>
-                    <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                    <li><a class="dropdown-item" href="#">Corporate</a></li>
+                  <ul
+                    class="dropdown-menu"
+                    id="website-type-options"
+                    role="listbox"
+                    aria-label="Website type options"
+                  >
+                    <li role="none"><button class="dropdown-item" type="button" role="option" data-value="E-commerce" aria-selected="false">E-commerce</button></li>
+                    <li role="none"><button class="dropdown-item" type="button" role="option" data-value="Portfolio" aria-selected="false">Portfolio</button></li>
+                    <li role="none"><button class="dropdown-item" type="button" role="option" data-value="Corporate" aria-selected="false">Corporate</button></li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <div class="additional-services full-width">
-              <label class="section-label">Additional Services</label>
+            <fieldset class="additional-services full-width">
+              <legend class="section-label">Additional services <span class="optional-label">(optional)</span></legend>
               <div class="checkbox-grid">
-                <label class="checkbox-container"
-                  ><input type="checkbox" /> Landing Page</label
-                >
-                <label class="checkbox-container"
-                  ><input type="checkbox" /> Ad Management</label
-                >
-                <label class="checkbox-container"
-                  ><input type="checkbox" /> SEO</label
-                >
-                <label class="checkbox-container"
-                  ><input type="checkbox" /> Video</label
-                >
+                <label class="checkbox-container" for="service-landing">
+                  <input id="service-landing" type="checkbox" name="landing_page" value="Landing page" />
+                  <span>Landing page</span>
+                </label>
+                <label class="checkbox-container" for="service-ad-management">
+                  <input id="service-ad-management" type="checkbox" name="ad_management" value="Ad management" />
+                  <span>Ad management</span>
+                </label>
+                <label class="checkbox-container" for="service-seo">
+                  <input id="service-seo" type="checkbox" name="seo" value="SEO" />
+                  <span>SEO</span>
+                </label>
+                <label class="checkbox-container" for="service-video">
+                  <input id="service-video" type="checkbox" name="video" value="Video" />
+                  <span>Video</span>
+                </label>
               </div>
               <div class="other-input">
-                <label class="checkbox-container"
-                  ><input type="checkbox" /> Other:</label
-                >
-                <input type="text" placeholder="Specify..." />
+                <label class="checkbox-container" for="service-other">
+                  <input id="service-other" type="checkbox" name="other_service_selected" value="Other" />
+                  <span>Other</span>
+                </label>
+                <label class="visually-hidden" for="other-service">Describe another service</label>
+                <input
+                  id="other-service"
+                  type="text"
+                  name="other_service"
+                  placeholder="Describe another service"
+                  disabled
+                />
               </div>
-            </div>
+            </fieldset>
 
             <div class="input-group-custom full-width">
-              <label>Comment:</label>
-              <textarea rows="4" placeholder="How can we help you?"></textarea>
+              <label for="project-details">Project details <span class="required-marker" aria-hidden="true">*</span></label>
+              <textarea
+                id="project-details"
+                name="message"
+                rows="4"
+                placeholder="What would you like to create or improve?"
+                required
+              ></textarea>
             </div>
 
-            <button class="btn-submit" type="submit">Submit Request</button>
+            <button
+              class="btn-submit"
+              type="submit"
+              aria-describedby="form-status"
+            >
+              Submit Request
+            </button>
           </form>
         </div>
       </section>
