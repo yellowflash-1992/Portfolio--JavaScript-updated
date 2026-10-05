@@ -452,8 +452,7 @@ h3 {
   margin-top: 25px;
 }
 
-.face,
-.logo-top {
+.face {
   width: 100%;
   align-items: center;
   display: flex;
@@ -501,6 +500,9 @@ h3 {
 }
 
 .logo-top {
+  width: 100%;
+  align-items: center;
+  display: flex;
   height: 100%;
   justify-content: center;
   transform-origin: bottom;
