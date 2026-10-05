@@ -1107,6 +1107,8 @@ footer {
   height: 80px;
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logos {
@@ -1143,11 +1145,6 @@ footer {
   position: relative;
   box-shadow: 0 0 0 #8000ff inset;
   transition-duration: 0.3s;
-}
-
-.getintouch-heading {
-  align-items: center;
-  justify-content: center;
 }
 
 .getintouch-heading article {
