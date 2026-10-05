@@ -79,7 +79,7 @@ let mybutton = document.getElementById("backtotopbutton");
 function scrollFunction() { document.body.scrollTop > 400 || document.documentElement.scrollTop > 400 ? mybutton.style.display = "block" : mybutton.style.display = "none" }
 
 function scrolltoTopfunction() { document.body.scrollTop = 0, document.documentElement.scrollTop = 0 }
-window.onscroll = function() { scrollFunction() }, document.addEventListener("contextmenu", function(e) { "IMG" === e.target.nodeName && e.preventDefault() }, !1);
+window.onscroll = function() { scrollFunction() }, document.addEventListener("contextmenu", function(e) { "IMG" === e.target.nodeName && e.preventDefault() });
 let Pupils = document.getElementsByClassName("footer-pupil"),
     pupilsArr = Array.from(Pupils),
     pupilStartPoint = -10,
