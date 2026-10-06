@@ -109,33 +109,35 @@ const cursorInner = document.getElementById("cursor-inner");
 const cursorOuter = document.getElementById("cursor-outer");
 const links = document.querySelectorAll("a,label,button");
 
-document.addEventListener("mousemove", function (e) {
-    const posX = e.clientX;
-    const posY = e.clientY;
-    cursorInner.style.left = posX + "px";
-    cursorInner.style.top = posY + "px";
-    cursorOuter.animate(
-        {
-            left: posX + "px",
-            top: posY + "px",
-        },
-        {
-            duration: 500,
-            fill: "forwards",
-        },
-    );
-});
+if (cursorInner && cursorOuter) {
+    document.addEventListener("mousemove", function (e) {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        cursorInner.style.left = posX + "px";
+        cursorInner.style.top = posY + "px";
+        cursorOuter.animate(
+            {
+                left: posX + "px",
+                top: posY + "px",
+            },
+            {
+                duration: 500,
+                fill: "forwards",
+            },
+        );
+    });
 
-links.forEach((link) => {
-    link.addEventListener("mouseenter", () => {
-        cursorInner.classList.add("hover");
-        cursorOuter.classList.add("hover");
+    links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+            cursorInner.classList.add("hover");
+            cursorOuter.classList.add("hover");
+        });
+        link.addEventListener("mouseleave", () => {
+            cursorInner.classList.remove("hover");
+            cursorOuter.classList.remove("hover");
+        });
     });
-    link.addEventListener("mouseleave", () => {
-        cursorInner.classList.remove("hover");
-        cursorOuter.classList.remove("hover");
-    });
-});
+}
 
 const backButton = document.querySelector(".home.bk");
 const tooltip = document.getElementById("global-tooltip");
