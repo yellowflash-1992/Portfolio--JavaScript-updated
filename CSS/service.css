@@ -137,6 +137,73 @@ body::before {
     transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* --- Light Mode Traveling & Breathing Glass Border --- */
+@property --light-border-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+[data-theme="light"] .glass-panel {
+    position: relative;
+}
+
+[data-theme="light"] .glass-panel::before {
+    content: '';
+    position: absolute;
+    inset: -1.5px;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: conic-gradient(
+        from var(--light-border-angle, 0deg),
+        transparent 0deg,
+        rgba(113, 97, 166, 0.35) 20deg,
+        rgba(168, 215, 125, 0.95) 60deg,
+        rgba(113, 97, 166, 1) 95deg,
+        rgba(168, 215, 125, 0.9) 130deg,
+        transparent 165deg,
+        transparent 200deg,
+        rgba(113, 97, 166, 0.35) 220deg,
+        rgba(168, 215, 125, 0.9) 260deg,
+        rgba(113, 97, 166, 1) 295deg,
+        rgba(168, 215, 125, 0.8) 330deg,
+        transparent 360deg
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+    animation: lightBorderTravel 14s linear infinite, borderBreathe 5s ease-in-out infinite alternate;
+}
+
+@keyframes lightBorderTravel {
+    to {
+        --light-border-angle: 360deg;
+    }
+}
+
+@keyframes borderBreathe {
+    0% {
+        opacity: 0.75;
+        filter: drop-shadow(0 0 4px rgba(113, 97, 166, 0.35));
+    }
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px rgba(168, 215, 125, 0.45));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-theme="light"] .glass-panel::before {
+        animation: none;
+        opacity: 0.85;
+        filter: none;
+    }
+}
+
 .container {
     max-width: 1200px;
     width: 100%;
